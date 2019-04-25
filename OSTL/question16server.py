@@ -22,15 +22,18 @@ while True:
     print('Server received', repr(data))
 
     filename='mytext.txt'
-    f = open(filename,'rb')
-    l = f.read(1024)
+    f = open(filename,'r')
+    l = f.read()
+    bytes2 = l.encode()
     while (l):
-       conn.send(l)
-       print('Sent ',repr(l))
-       l = f.read(1024)
+       conn.send(bytes2)
+       print('Sent ',repr(bytes2))
+       l = f.read()
+       bytes2 = l.encode()
+
     f.close()
 
     print('Done sending')
-    conn.send('Thank you for connecting')
+    conn.send(b'Thank you for connecting')
     conn.close()
 
