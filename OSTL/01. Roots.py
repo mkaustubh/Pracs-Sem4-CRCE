@@ -10,8 +10,8 @@ c = 1;
 d = (b**2) - (4*a*c);
 
 if (d < 0):
-	print ("Roots are Complex");
-	exit();
+   print ("Roots are Complex");
+   exit();
 
 x1 = (-b + sqrt(d))/(2*a)
 x2 = (-b - sqrt(d))/(2*a)

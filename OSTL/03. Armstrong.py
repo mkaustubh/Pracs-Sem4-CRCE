@@ -12,11 +12,11 @@ strRev = strV[::-1];
 sum = 0;
 
 for ch in strRev:
-	i = int(ch);
-	# Sum = Sum + Cube(i)
-	sum = sum + i**3;	
+   i = int(ch);
+   # Sum = Sum + Cube(i)
+   sum = sum + i**3;	
 
 if sum == value:
-	print ("Is Armstrong");
+   print ("Is Armstrong");
 else:
-	print ("Not Armstrong");
+   print ("Not Armstrong");
